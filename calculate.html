@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculate BMI</title>
+  <title>Llogarit BMI</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Calculate Your BMI</h1>
-  </header>
 
-  <section class="form-section">
+  <h1>Llogarit BMI</h1>
+
+  <div class="container">
     <form id="bmiForm">
-      <label>Weight (kg)</label>
-      <input type="number" id="weight" required>
-
-      <label>Height (cm)</label>
-      <input type="number" id="height" required>
-
-      <button type="submit" class="btn">Calculate</button>
+      <input type="number" id="weight" placeholder="Pesha (kg)" required>
+      <input type="number" id="height" placeholder="Gjatësia (cm)" required>
+      <button type="submit">Llogarit</button>
     </form>
 
-    <h2 id="result"></h2>
-  </section>
+    <p id="result"></p>
 
-  <a href="index.html" class="back">⬅ Back Home</a>
+    <h2>Historiku i BMI-ve</h2>
+    <ul id="history"></ul>
+
+    <button id="clearBtn">Fshij historikun</button>
+
+    <br><br>
+    <a href="index.html" class="btn">Kthehu në Homepage</a>
+  </div>
 
   <script src="script.js"></script>
 </body>
