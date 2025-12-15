@@ -2,39 +2,49 @@
 <html lang="sq">
 <head>
   <meta charset="UTF-8">
-  <title>BMI Tracker</title>
+  <title>BMI Health Guide</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>BMI Tracker</h1>
+<header class="hero">
+  <div class="overlay">
+    <h1>BMI & Shëndeti i Trupit</h1>
+    <a href="calculate.html" class="btn main-btn">Llogarit BMI</a>
+  </div>
+</header>
 
-  <section class="container">
+<section class="bmi-info">
+  <div class="bmi-box">
     <h2>Çfarë është BMI?</h2>
-    <p>
-      Indeksi i Masës Trupore (BMI) është një tregues që përdoret për të vlerësuar
-      nëse pesha e një personi është e shëndetshme në raport me gjatësinë.
-    </p>
+    <p>Body Mass Index (BMI) është një tregues për të vlerësuar nëse pesha e trupit është në përpjesëtim të shëndetshëm me gjatësinë.</p>
+  </div>
+</section>
 
-    <h2>Si llogaritet BMI?</h2>
-    <p>
-      BMI = pesha (kg) / gjatësia² (m²)
-    </p>
+<section class="info-grid">
+  <div class="card">
+    <img src="images/bmi.png" alt="BMI">
+    <h3>Pse është i rëndësishëm BMI?</h3>
+    <p>Nivelet e shëndetshme të BMI ndihmojnë në parandalimin e diabetit dhe sëmundjeve të zemrës.</p>
+  </div>
 
-    <h2>Rëndësia e aktivitetit fizik</h2>
-    <p>
-      Aktiviteti fizik i rregullt ndihmon në ruajtjen e peshës së shëndetshme,
-      përmirëson shëndetin e zemrës dhe rrit energjinë.
-    </p>
+  <div class="card">
+    <img src="images/aktiviteti.png" alt="Aktivitet Fizik">
+    <h3>Aktiviteti Fizik</h3>
+    <p>Ushtrimet e përditshme ndihmojnë forcimin e muskujve dhe mirëqenien mendore.</p>
+  </div>
 
-    <h2>Rëndësia e ushqyerjes së shëndetshme</h2>
-    <p>
-      Ushqyerja e balancuar siguron lëndë ushqyese të nevojshme dhe ndihmon në
-      parandalimin e sëmundjeve.
-    </p>
+  <div class="card">
+    <img src="images/ushqyerja.png" alt="Ushqyerje">
+    <h3>Ushqyerja e Shëndetshme</h3>
+    <p>Një dietë e balancuar me fruta, perime dhe proteina ndihmon në ruajtjen e një BMI të shëndetshme.</p>
+  </div>
+</section>
 
-    <a href="calculate.html" class="btn">Llogarit BMI-në</a>
-  </section>
+<footer class="footer">
+  <img src="images/meter.png" alt="Footer Image">
+  <p>© 2025 BMI Health Guide</p>
+</footer>
 
 </body>
 </html>

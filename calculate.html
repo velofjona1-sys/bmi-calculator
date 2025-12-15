@@ -4,29 +4,61 @@
   <meta charset="UTF-8">
   <title>Llogarit BMI</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
+<button class="dark-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+<header class="calc-header">
   <h1>Llogarit BMI</h1>
+  <p>Kalkulator + histori + grafik + këshilla</p>
+</header>
 
-  <div class="container">
-    <form id="bmiForm">
-      <input type="number" id="weight" placeholder="Pesha (kg)" required>
-      <input type="number" id="height" placeholder="Gjatësia (cm)" required>
-      <button type="submit">Llogarit</button>
-    </form>
+<section class="calculator">
+  <input type="number" id="weight" placeholder="Pesha (kg)">
+  <input type="number" id="height" placeholder="Gjatësia (cm)">
+  <button onclick="calculateBMI()">Llogarit</button>
+  <div style="margin-bottom: 30px;"></div>
+  <div id="result"></div>
+  <a href="index.html" class="btn" style="margin-top:20px; display:inline-block;">Kthehu tek Homepage</a>
+</section>
 
-    <p id="result"></p>
+<section class="chart-section">
+  <canvas id="bmiChart"></canvas>
+</section>
 
-    <h2>Historiku i BMI-ve</h2>
-    <ul id="history"></ul>
+<section class="bmi-history">
+  <h2>Histori BMI</h2>
+  <ul id="bmiHistoryList"></ul>
+  <button onclick="clearHistory()" class="btn" style="margin-top:10px;">Fshij Historinë</button>
+</section>
 
-    <button id="clearBtn">Fshij historikun</button>
+<section class="bmi-guide">
+  <h2>Udhëzues BMI</h2>
+  <table>
+    <tr>
+      <th>BMI</th>
+      <th>Kategoria</th>
+    </tr>
+    <tr><td>&lt; 18.5</td><td>Nën peshë</td></tr>
+    <tr><td>18.5 – 24.9</td><td>Normale</td></tr>
+    <tr><td>25 – 29.9</td><td>Mbipeshë</td></tr>
+    <tr><td>≥ 30</td><td>Obezitet</td></tr>
+  </table>
+</section>
 
-    <br><br>
-    <a href="index.html" class="btn">Kthehu në Homepage</a>
-  </div>
+<section class="api-section">
+  <h2>Ushtrim dhe Dietë e Sugjeruar</h2>
+  <p id="exercise">Duke u ngarkuar...</p>
+  <button onclick="loadExercise()">Ndrysho Ushtrimin</button>
+</section>
 
-  <script src="script.js"></script>
+<footer class="footer">
+  <img src="images/meter.png" alt="Footer Image">
+  <p>© 2025 BMI Health Guide</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
